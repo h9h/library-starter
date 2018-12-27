@@ -1,27 +1,37 @@
 {
   "name": "library-starter",
   "version": "1.0.0",
-  "description": "Base for ES6 Libraries",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "webpack --mode=production && npm run test",
-    "dev": "webpack --progress --colors --watch --mode=development",
-    "test": "jest",
-    "test:watch": "jest --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/h9h/es6-library-starter.git"
-  },
+  "description": "Base for ES6 Libraries . >>> change for concrete usage! And change URLs down below to git-Repository, bugs and homepage <<<",
   "keywords": [
+    "starter",
     "es6"
   ],
-  "author": "Michael Heinke",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h9h/es6-library-starter.git"
+  },
   "bugs": {
     "url": "https://github.com/h9h/es6-library-starter/issues"
   },
   "homepage": "https://github.com/h9h/es6-library-starter",
+  "author": "Michael Heinke",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "pretest": "npm run lint",
+    "test": "jest",
+    "test:prod": "cross-env BABEL_ENV=production npm run test",
+    "test:watch": "jest --watch",
+    "lint": "eslint src test",
+    "build": "webpack --mode=production",
+    "dev": "webpack --progress --colors --watch --mode=development",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
@@ -34,6 +44,7 @@
     "eslint": "^5.11.1",
     "eslint-loader": "^2.1.1",
     "jest": "^23.6.0",
+    "rimraf": "^2.6.2",
     "uglifyjs-webpack-plugin": "^2.1.0",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2"

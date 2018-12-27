@@ -1,0 +1,40 @@
+{
+  "name": "library-starter",
+  "version": "1.0.0",
+  "description": "Base for ES6 Libraries",
+  "scripts": {
+    "build": "webpack --mode=production && npm run test",
+    "dev": "webpack --progress --colors --watch --mode=development",
+    "test": "jest",
+    "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/h9h/es6-library-starter.git"
+  },
+  "keywords": [
+    "es6"
+  ],
+  "author": "Michael Heinke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/h9h/es6-library-starter/issues"
+  },
+  "homepage": "https://github.com/h9h/es6-library-starter",
+  "devDependencies": {
+    "@babel/cli": "",
+    "@babel/core": "",
+    "@babel/preset-env": "",
+    "babel-eslint": "",
+    "babel-loader": "",
+    "jest": "",
+    "cross-env": "",
+    "eslint": "",
+    "eslint-loader": "",
+    "uglifyjs-webpack-plugin": "",
+    "webpack": "",
+    "webpack-cli": ""
+  },
+  "browserslist": "> 0.25%, not dead",
+  "targets": "> 0.25%, not dead"
+}

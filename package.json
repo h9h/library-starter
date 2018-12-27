@@ -22,19 +22,35 @@
   },
   "homepage": "https://github.com/h9h/es6-library-starter",
   "devDependencies": {
-    "@babel/cli": "",
-    "@babel/core": "",
-    "@babel/preset-env": "",
-    "babel-eslint": "",
-    "babel-loader": "",
-    "jest": "",
-    "cross-env": "",
-    "eslint": "",
-    "eslint-loader": "",
-    "uglifyjs-webpack-plugin": "",
-    "webpack": "",
-    "webpack-cli": ""
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.11.1",
+    "eslint-loader": "^2.1.1",
+    "jest": "^23.6.0",
+    "uglifyjs-webpack-plugin": "^2.1.0",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
   },
   "browserslist": "> 0.25%, not dead",
-  "targets": "> 0.25%, not dead"
+  "targets": "> 0.25%, not dead",
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/lib/**",
+      "!**/node_modules/**"
+    ]
+  },
+  "dependencies": {
+    "babel-core": "^7.0.0-bridge.0"
+  }
 }

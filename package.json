@@ -2,11 +2,12 @@
   "name": "library-starter",
   "version": "1.0.0",
   "description": "Base for ES6 Libraries",
+  "main": "lib/index.js",
   "scripts": {
     "build": "webpack --mode=production && npm run test",
     "dev": "webpack --progress --colors --watch --mode=development",
     "test": "jest",
-    "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js"
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
